@@ -19,7 +19,7 @@ export default function HookFormPage() {
             />
             {errors.lastName && <p>Last name is required.</p>}
             <input
-                {...register('age', { pattern: /\d+/ })}
+                {...register('age', { pattern: /^\d+$/, max: 99, min: 18 })}
                 className='border-2 border-black m-4'
             />
             {errors.age && <p>Please enter number for age.</p>}
