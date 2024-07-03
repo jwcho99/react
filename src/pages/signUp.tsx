@@ -10,6 +10,7 @@ const schema = z
             .string()
             .min(1, { message: '이메일은 필수입니다.' })
             .email({ message: '이메일 형식이 잘못되었습니다.' }),
+        // regex(/^w+\@\w+\.w+$/, {message: '이메일 형식이 잘못되었습니다.'})
         userName: z
             .string()
             .min(1, { message: '이름은 필수입니다.' })
